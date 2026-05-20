@@ -1,11 +1,12 @@
 // Dados de todos os planetas do sistema solar.
 // Separar dados do código visual é uma boa prática:
 // para mudar qualquer valor, você edita só este arquivo.
+const BASE = import.meta.env.BASE_URL
 
 export const PLANETS = [
   {
     name: 'Mercúrio',
-    texture: '/textures/mercury.jpg',
+    texture: '${BASE}mercury.jpg',
     radius: 0.38,         // Tamanho da esfera na cena
     distance: 10,         // Distância ao Sol na cena
     speed: 4.7,           // Velocidade orbital (maior = mais rápido)
@@ -23,7 +24,7 @@ export const PLANETS = [
   },
   {
     name: 'Vênus',
-    texture: '/textures/venus.jpg',
+    texture: '${BASE}textures/venus.jpg',
     radius: 0.95,
     distance: 16,
     speed: 3.5,
@@ -41,7 +42,7 @@ export const PLANETS = [
   },
   {
     name: 'Terra',
-    texture: '/textures/earth.jpg',
+    texture: '${BASE}textures/earth.jpg',
     //normalMap: '/textures/earth-normal.jpg',
     //specularMap: '/textures/earth-specular.jpg',
     radius: 1,
@@ -62,7 +63,7 @@ export const PLANETS = [
   },
   {
     name: 'Marte',
-    texture: '/textures/mars.jpg',
+    texture: '${BASE}textures/mars.jpg',
     radius: 0.53,
     distance: 32,
     speed: 2.41,
@@ -80,7 +81,7 @@ export const PLANETS = [
   },
   {
     name: 'Júpiter',
-    texture: '/textures/jupiter.jpg',
+    texture: '${BASE}textures/jupiter.jpg',
     radius: 3.5,
     distance: 48,
     speed: 1.31,
@@ -98,7 +99,7 @@ export const PLANETS = [
   },
   {
     name: 'Saturno',
-    texture: '/textures/saturn.jpg',
+    texture: '${BASE}textures/saturn.jpg',
     radius: 2.9,
     distance: 65,
     speed: 0.97,
@@ -107,7 +108,7 @@ export const PLANETS = [
     type: 'Gigante Gasoso',
     color: '#e4d191',
     hasRings: true,
-    ringTexture: '/textures/saturn-ring.jpg',
+    ringTexture: '${BASE}textures/saturn-ring.jpg',
     ringInnerRadius: 1.4,
     ringOuterRadius: 2.4,
     facts: [
@@ -120,7 +121,7 @@ export const PLANETS = [
   },
   {
     name: 'Urano',
-    texture: '/textures/uranus.jpg',
+    texture: '${BASE}textures/uranus.jpg',
     radius: 1.8,
     distance: 82,
     speed: 0.68,
@@ -138,7 +139,7 @@ export const PLANETS = [
   },
   {
     name: 'Netuno',
-    texture: '/textures/neptune.jpg',
+    texture: '${BASE}textures/neptune.jpg',
     radius: 1.7,
     distance: 100,
     speed: 0.54,

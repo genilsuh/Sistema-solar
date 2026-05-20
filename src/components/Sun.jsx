@@ -6,7 +6,7 @@ import { useRef } from 'react'
 
 export function Sun() {
   const meshRef = useRef()
-  const texture = useTexture('/textures/sun.jpg')
+  const texture = useTexture('${import.meta.env.BASE_URL}textures/sun.jpg')
 
   // Rotação suave do Sol (60x por segundo)
   useFrame(() => {
