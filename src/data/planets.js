@@ -1,0 +1,157 @@
+// Dados de todos os planetas do sistema solar.
+// Separar dados do código visual é uma boa prática:
+// para mudar qualquer valor, você edita só este arquivo.
+
+export const PLANETS = [
+  {
+    name: 'Mercúrio',
+    texture: '/textures/mercury.jpg',
+    radius: 0.38,         // Tamanho da esfera na cena
+    distance: 10,         // Distância ao Sol na cena
+    speed: 4.7,           // Velocidade orbital (maior = mais rápido)
+    rotationSpeed: 0.004, // Velocidade de rotação própria
+    tilt: 0.03,           // Inclinação axial em graus
+    type: 'Planeta Rochoso',
+    color: '#b5b5b5',     // Cor se a textura não carregar
+    facts: [
+      'Menor planeta do sistema solar',
+      'Um dia dura 59 dias terrestres',
+      'Temperatura: -180°C a 430°C',
+      'Sem atmosfera significativa',
+      'Superfície coberta de crateras',
+    ],
+  },
+  {
+    name: 'Vênus',
+    texture: '/textures/venus.jpg',
+    radius: 0.95,
+    distance: 16,
+    speed: 3.5,
+    rotationSpeed: 0.002,
+    tilt: 177.4,
+    type: 'Planeta Rochoso',
+    color: '#e8cda0',
+    facts: [
+      'Planeta mais quente: 465°C',
+      'Rotação retrógrada (gira ao contrário)',
+      'Um dia é maior que seu ano',
+      'Nuvens de ácido sulfúrico',
+      'Pressão atmosférica 90x maior que a Terra',
+    ],
+  },
+  {
+    name: 'Terra',
+    texture: '/textures/earth.jpg',
+    //normalMap: '/textures/earth-normal.jpg',
+    //specularMap: '/textures/earth-specular.jpg',
+    radius: 1,
+    distance: 23,
+    speed: 2.98,
+    rotationSpeed: 0.005,
+    tilt: 23.5,
+    type: 'Planeta Rochoso',
+    color: '#3a7bd5',
+    hasAtmosphere: true,  // Renderiza camada de atmosfera azul
+    facts: [
+      'Único planeta com vida conhecida',
+      '71% da superfície é oceano',
+      '1 satélite natural: a Lua',
+      'Atmosfera protetora de N₂ e O₂',
+      'Campo magnético que protege da radiação solar',
+    ],
+  },
+  {
+    name: 'Marte',
+    texture: '/textures/mars.jpg',
+    radius: 0.53,
+    distance: 32,
+    speed: 2.41,
+    rotationSpeed: 0.005,
+    tilt: 25.2,
+    type: 'Planeta Rochoso',
+    color: '#c1440e',
+    facts: [
+      'O "planeta vermelho" (óxido de ferro)',
+      'Maior vulcão: Olympus Mons (22 km)',
+      '2 luas: Fobos e Deimos',
+      'Um dia marciano = 24h 37min',
+      'Temperatura: -125°C a 20°C',
+    ],
+  },
+  {
+    name: 'Júpiter',
+    texture: '/textures/jupiter.jpg',
+    radius: 3.5,
+    distance: 48,
+    speed: 1.31,
+    rotationSpeed: 0.012,
+    tilt: 3.1,
+    type: 'Gigante Gasoso',
+    color: '#c88b3a',
+    facts: [
+      'Maior planeta do sistema solar',
+      'Grande Mancha Vermelha dura há séculos',
+      '95 luas conhecidas (recorde)',
+      'Campo magnético 20.000x mais forte que o da Terra',
+      'Protege a Terra de asteroides',
+    ],
+  },
+  {
+    name: 'Saturno',
+    texture: '/textures/saturn.jpg',
+    radius: 2.9,
+    distance: 65,
+    speed: 0.97,
+    rotationSpeed: 0.009,
+    tilt: 26.7,
+    type: 'Gigante Gasoso',
+    color: '#e4d191',
+    hasRings: true,
+    ringTexture: '/textures/saturn-ring.jpg',
+    ringInnerRadius: 1.4,
+    ringOuterRadius: 2.4,
+    facts: [
+      'Anéis compostos de gelo e rocha',
+      'Menos denso que a água (flutuaria!)',
+      '146 luas conhecidas',
+      'Ventos de até 1.800 km/h',
+      'Os anéis têm 400.000 km de largura mas ~10m de espessura',
+    ],
+  },
+  {
+    name: 'Urano',
+    texture: '/textures/uranus.jpg',
+    radius: 1.8,
+    distance: 82,
+    speed: 0.68,
+    rotationSpeed: 0.003,
+    tilt: 97.8,            // Praticamente deitado!
+    type: 'Gigante de Gelo',
+    color: '#7de8e8',
+    facts: [
+      'Rotação quase deitada (inclinação de 98°)',
+      'Temperatura mínima: -224°C',
+      '27 luas conhecidas',
+      'Possui 13 anéis fracos',
+      'Composto de água, metano e amônia congelados',
+    ],
+  },
+  {
+    name: 'Netuno',
+    texture: '/textures/neptune.jpg',
+    radius: 1.7,
+    distance: 100,
+    speed: 0.54,
+    rotationSpeed: 0.004,
+    tilt: 28.3,
+    type: 'Gigante de Gelo',
+    color: '#3f54ba',
+    facts: [
+      'Ventos mais velozes do sistema solar: 2.100 km/h',
+      'Temperatura: -218°C',
+      '16 luas conhecidas',
+      'Grande Mancha Escura (tempestade enorme)',
+      'Um ano em Netuno = 165 anos terrestres',
+    ],
+  },
+]
