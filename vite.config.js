@@ -7,5 +7,5 @@ export default defineConfig({
   // Para rodar localmente: '/'
   // Para publicar no GitHub Pages: '/sistema-solar/'
   // Deixe '/' enquanto estiver desenvolvendo
-  base: 'https://github.com/genilsuh/Sistema-solar.git',
+  base: '/Sistema-solar/',
 })
