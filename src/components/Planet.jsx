@@ -13,7 +13,7 @@ export function Planet({ data, effectiveSpeed, onSelect }) {
 
   // Textura dos anéis — só Saturno tem
   const ringTexture = useTexture(
-    data.hasRings ? data.ringTexture : '/textures/saturn-ring.jpg'
+    data.hasRings ? data.ringTexture : `${import.meta.env.BASE_URL}textures/saturn-ring.jpg`
   )
 
   useFrame(({ clock }) => {
