@@ -20,12 +20,15 @@ export function Sun() {
 
       {/* Luz pontual que ilumina os planetas — irradia em todas as direções */}
       <pointLight
-        intensity={3}
+        intensity={8}
         distance={0}
-        color="#fff3c0"
+        decay={2}
+        color="#fff530"
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
+        shadow-camera-near={1}
+        shadow-camera-far={500}
       />
 
       {/* Esfera principal do Sol */}
@@ -35,8 +38,9 @@ export function Sun() {
           map={texture}
           emissive="#ff6600"
           emissiveMap={texture}
-          emissiveIntensity={0.8}
-          roughness={0.8}
+          emissiveIntensity={1}
+          roughness={1}
+          metalness={0}
         />
       </mesh>
 
