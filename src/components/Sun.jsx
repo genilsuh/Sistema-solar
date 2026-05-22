@@ -1,5 +1,3 @@
-// O Sol: fonte de luz da cena + esfera visível com aparência de estrela.
-
 import { useTexture } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
@@ -8,30 +6,27 @@ export function Sun() {
   const meshRef = useRef()
   const texture = useTexture(`${import.meta.env.BASE_URL}textures/sun.jpg`)
 
-  // Rotação suave do Sol (60x por segundo)
   useFrame(() => {
     meshRef.current.rotation.y += 0.002
   })
 
   return (
     <group>
-      {/* Luz ambiente fraca — para não deixar o fundo completamente preto */}
-      <ambientLight intensity={0.06} color="#ffffff" />
+      {/* Luz ambiente — ilumina tudo levemente para não ficar preto */}
+      <ambientLight intensity={0.4} />
 
-      {/* Luz pontual que ilumina os planetas — irradia em todas as direções */}
+      {/* Luz do Sol — sem decay para alcançar todos os planetas */}
       <pointLight
-        intensity={8}
+        intensity={5}
         distance={0}
-        decay={2}
-        color="#fff530"
+        decay={0}
+        color="#fff5e0"
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
-        shadow-camera-near={1}
-        shadow-camera-far={500}
       />
 
-      {/* Esfera principal do Sol */}
+      {/* Esfera do Sol */}
       <mesh ref={meshRef}>
         <sphereGeometry args={[5, 32, 32]} />
         <meshStandardMaterial
@@ -44,7 +39,7 @@ export function Sun() {
         />
       </mesh>
 
-      {/* Halo de brilho ao redor do Sol */}
+      {/* Halo */}
       <mesh>
         <sphereGeometry args={[5.4, 32, 32]} />
         <meshBasicMaterial

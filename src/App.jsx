@@ -45,7 +45,7 @@ export default function App() {
       */}
       <Canvas
         camera={{ position: [0, 55, 120], fov: 50, near: 0.1, far: 2000 }}
-        style={{ width: '100vw', height: '100vh', background: '#0200010' }}
+        style={{ width: '100vw', height: '100vh', background: '#000010' }}
         shadows
         gl={{ antialias: true, powerPreference: 'high-performance' }}
       >
